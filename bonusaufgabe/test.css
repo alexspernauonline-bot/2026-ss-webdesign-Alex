@@ -1,0 +1,77 @@
+/* --- 1. RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+/* --- 2. LEINWAND (POSTER) --- */
+.poster-canvas {
+    width: 600px;
+    height: 800px;
+    background-color: #e5d3c3;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- 3. DAS LINIENMUSTER --- */
+.line-pattern-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.v-line {
+    width: 5px;
+    background-color: #000;
+    z-index: 1;
+}
+
+/* --- 4. DER KREIS --- */
+.green-circle {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: #01542f;
+    border-radius: 50%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* --- 5. TEXT-BEREICH --- */
+.text-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    width: 500px;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.sub-title {
+    font-size: 16px;
+    color: #333;
+}
