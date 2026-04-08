@@ -28,15 +28,27 @@
         }
 
         /* Platzierung der Elemente */
-        header, footer {
+        header, footer 
+        { 
+            display: grid; grid-column: 1 / -1; padding: 16px;
+           
+        }
+
+        aside
+        {
+            display: grid;
+             box-sizing: border-box; padding: 16px;
+              background-color: lightcoral;
+
 
         }
 
-        aside {
-
-        }
-
-        main {
+        main 
+        {
+            display: grid;;
+             align-self: flex-start;
+             align-content: space-around;
+             box-sizing: 1fr;
 
         }
     </style>

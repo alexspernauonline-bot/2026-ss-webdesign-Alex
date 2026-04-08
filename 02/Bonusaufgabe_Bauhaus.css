@@ -1,0 +1,85 @@
+/* --- 1. RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333; /* Dunkler Hintergrund, damit das Poster hervorsticht */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif; /* Bauhaus-Regel */
+}
+
+/* --- 2. LEINWAND (POSTER) --- */
+.poster-canvas {
+    width: 600px;
+    height: 800px;
+    background-color: #e5d3c3; /* Typischer Bauhaus-Beige-Ton */
+    position: relative; /* ZWINGEND für absolute Positionierung im Inneren */
+    overflow: hidden; /* Verhindert, dass Elemente über den Rand ragen */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Nur für die Optik im Browser */
+}
+
+/* --- 3. DAS LINIENMUSTER --- */
+.line-pattern-container {
+    position: absolute;
+    top: 50px;       /* Präziser Abstand von oben */
+    left: 50px;      /* Präziser Abstand von links */
+    width: 500px;    /* Breite des gesamten Mustefelds */
+    height: 500px;   /* Höhe des Mustefelds */
+    
+    /* DIE FLEXBOX-MAGIE FÜR VIELE LINIEN */
+    display: flex;
+    justify-content: space-between; /* Verteilt die Linien mit exakt gleichem Abstand */
+    align-items: stretch;           /* Die Linien nutzen die volle Höhe des Containers */
+}
+
+.v-line {
+    width: 5px;          /* Präzise Dicke jeder einzelnen Linie */
+    background-color: #000; /* Tiefschwarz */
+    z-index: 1; /* Damit die Linien unter dem Kreis liegen */
+}
+
+/* --- 4. DER KREIS --- */
+.green-circle {
+    position: absolute;
+    width: 380px;      /* Durchmesser */
+    height: 380px;     /* Durchmesser */
+    background-color: #01542f; /* Bauhaus-Dunkelgrün */
+    
+    /* Box-Modell: Quadrat -> Kreis */
+    border-radius: 50%;
+    
+    /* Präzise Positionierung: Um den Kreis zu zentrieren, 
+       nutzen wir einen Trick mit transform. */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Schiebt den Mittelpunkt exakt in die Mitte */
+    
+    z-index: 10; /* Damit der Kreis über den Linien liegt */
+}
+
+/* --- 5. TEXT-BEREICH --- */
+.text-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    width: 500px;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -2px; /* Bauhaus-Typo-Stil */
+    margin-bottom: 15px;
+}
+
+.sub-title {
+    font-size: 16px;
+    color: #333;
+}
