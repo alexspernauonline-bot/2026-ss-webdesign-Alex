@@ -56,7 +56,7 @@ body {
     
     /* Präzise Positionierung: Um den Kreis zu zentrieren, 
        nutzen wir einen Trick mit transform. */
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Schiebt den Mittelpunkt exakt in die Mitte */
     
