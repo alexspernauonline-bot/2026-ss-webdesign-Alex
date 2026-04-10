@@ -1,0 +1,38 @@
+:root {
+   --base: 16px;
+   --ratio: 1.25;
+    --h6: calc(var(--base) * pow(var(--ratio), 0)); /* Base size */
+    --h5: calc(var(--base) * pow(var(--ratio), 1));
+    --h4: calc(var(--base) * pow(var(--ratio), 2));
+    --h3: calc(var(--base) * pow(var(--ratio), 3));
+    --h2: calc(var(--base) * pow(var(--ratio), 4));
+    --h1: calc(var(--base) * pow(var(--ratio), 5)); /* Largest, approx. 85px */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Body font */
+    margin: 20px;
+    padding: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rouge Script', cursive; /* Heading font */
+    margin: 0 0 10px 0;
+}
+/* Heading sizes */
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--h4); }
+h5 { font-size: var(--h5); }
+h6 { font-size: var(--h6); }
+
+/* Micro-typography */
+h1 {
+    line-height: 1.0;
+    letter-spacing: -0.02em; /* Negative for tighter spacing */
+}
+
+p {
+    line-height: 1.5;
+    font-size: var(--h6); /* Match base size */
+}
