@@ -1,28 +1,31 @@
 let position = 0;
-const maxPosition = 15;
+const maxPosition = 20; // Width of the animation area
 
 setInterval(() => {
     console.clear();
 
-    // Create the water line
-    let water = '';
-    for (let i = 0; i < maxPosition; i++) {
-        water += '~';
-    }
-
-    // Create the duck line with duck at position
-    let duckLine = '';
+    // Create the water line with duck on it
+    let waterLine = '';
     for (let i = 0; i < maxPosition; i++) {
         if (i === position) {
-            duckLine += '🦆';
+            waterLine += '🦆';
         } else {
-            duckLine += ' ';
+            waterLine += '~';
+        }
+    }
+    let waterSurface = " ";
+    for (let i = 0; i < maxPosition; i++) {
+        if(i === position) {
+            waterSurface += "~ "; // Wave emoji
+        }
+        else {
+            waterSurface += "~";
         }
     }
 
     // Print the animation
-    console.log(duckLine);
-    console.log(water);
+    console.log(waterLine);
+    console.log(waterSurface);
 
     // Move duck to the right
     position++;
@@ -35,6 +38,6 @@ setInterval(() => {
 
 document.addEventListener('keyup', function(event) {
     if (event.code === 'Space') {
-        console.log("Du hast die Katze gestreichelt! Schnurrr!");
+        console.log("Happy Quack!");
     }
 });
