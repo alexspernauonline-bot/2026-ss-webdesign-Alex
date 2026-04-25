@@ -1,0 +1,6 @@
+<style>
+  .spiegeln {
+    display: inline-block; /* Notwendig für span-Elemente */
+    transform: scaleX(-1);
+  }
+</style>
