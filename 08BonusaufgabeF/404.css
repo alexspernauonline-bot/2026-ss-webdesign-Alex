@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px; /* Ein bisschen Padding für die Lesbarkeit */
+    font-family: ui-monospace, 'Cascadia Code', 'Fira Mono', monospace;
+}
+.body {
+    
+    
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+  }
+::selection {
+    background: #00E5FF; /* Knalliges Neon-Blau/Cyan */
+    color: #000000;      /* Schwarzer Text beim Markieren */
+}
+.buttonCall {
+    border: 4px solid #000;
+    border-radius: 32px;
+    box-shadow: 8px 8px 0px #000;
+    transition: transform 0.07s ease; /* Ganz kurze, knackige Bewegung */
+    
+}
+.buttonCall:hover {
+    transform: translateY(-5px);
+    
+  }
+.buttonCall:active {
+    /* Bewegt den Button genau um die Pixel des Schattens nach unten rechts */
+    transform: translate(8px, 8px); 
+    /* Lässt den Schatten im gleichen Moment verschwinden */
+    box-shadow: 0px 0px 0px #000; 
+}
+.baustellen-balken {
+    background: #000;
+    color: #FFF;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+.background {
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(
+        98deg,
+       #fc87da 0%,
+       #cb94ef 36%,
+       #41e0e7 70%,
+       #28f6c2 100%
+        );
+    background-size: cover;
+}
