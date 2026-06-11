@@ -82,6 +82,7 @@ body {
     width: 100%;            /* Oder z.B. max-width: 400px; */
     box-sizing: border-box; /* Damit Padding die Box nicht vergrößert */
 }
+.card-body { padding: 1.5rem; }
 .card-content {
     /* Zwingt das Flex-Element, bei Bedarf kleiner als sein Textinhalt zu schrumpfen */
     min-width: 0; 
