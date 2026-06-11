@@ -9,12 +9,23 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    color: #fff;
-    padding: 1rem;
+    z-index: 100;
+    color: black;
+    padding: 0.5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-variant: bold;
+    background-color: #fff;
+
+     transition: top 0.3s ease; /* Macht das Ein- und Ausblenden geschmeidig */
+    
+}
+/* Diese Klasse wird per JavaScript hinzugefügt, wenn man nach unten scrollt */
+.navbar--hidden {
+    top: -100px; /* Schiebt die Navbar (je nach Eigenhöhe) nach oben aus dem Bild */
 }
 body {
+    padding-top: 90px;
     color: #1a1a1a;
     min-height: 100vh;
     padding: 4rem 2rem;
@@ -26,7 +37,7 @@ body {
         #41e0e7 70%,
         #28f6c2 100% 
         );
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed; /* Verhindert, dass der Verlauf beim Scrollen bricht */
 }
 
@@ -61,4 +72,19 @@ body {
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+   
+    word-break: break-word;
+    flex-direction: column; /* Falls die Card-Inhalte untereinander stehen */
+    width: 100%;            /* Oder z.B. max-width: 400px; */
+    box-sizing: border-box; /* Damit Padding die Box nicht vergrößert */
+}
+.card-content {
+    /* Zwingt das Flex-Element, bei Bedarf kleiner als sein Textinhalt zu schrumpfen */
+    min-width: 0; 
+    flex-shrink: 1;
+}
+.card-text {
+    min-width: 0;           /* Flexbox-Schrumpfen erlauben */
+    overflow-wrap: break-word; /* Textbrüche erzwingen */
+    color: #1a1a1a;
 }
