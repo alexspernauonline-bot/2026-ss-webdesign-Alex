@@ -5,6 +5,9 @@
     font-family: 'Space Mono', monospace;
     font-family: ui-monospace, 'Cascadia Code', 'Fira Mono', monospace;
 }
+#exit {
+    cursor: pointer;
+  }
 nav {
     position: fixed;
     top: 0;
@@ -61,6 +64,7 @@ body {
     background-color: black; /*dunkler Hintergrund beim Hover */
     color:#fff;
     box-shadow: none;
+    cursor: pointer;
     
   }
 .buttonCall:active {
