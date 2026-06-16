@@ -20,3 +20,20 @@ window.addEventListener('scroll', () => {
     // Der Extra-Check verhindert negative Werte beim "Bounce-Effekt" (z.B. am Mac/iOS)
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, { passive: true }); // passive erhöht die Scroll-Performance
+
+const buttons = Array.from(document.querySelectorAll('.buttonCall'));
+const correctIndex = Math.floor(Math.random() * buttons.length);
+const realLink = '../index.html';
+
+buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        if (index === correctIndex) {
+            window.location.href = realLink;
+        } else {
+            button.textContent = 'Hoppla, falsch! Versuch es nochmal...';
+            button.style.backgroundColor = '#ff5c5c';
+            button.disabled = true;
+            button.style.cursor = 'not-allowed';
+        }
+    });
+});
